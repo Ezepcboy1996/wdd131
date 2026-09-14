@@ -1,0 +1,95 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+header {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;        
+    padding: 1rem;
+    background-color: #0077cc;
+    color: white;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1rem;
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+
+}
+
+main h1 {
+  grid-column: 1 / -1;  
+  text-align: cente;
+  margin-bottom: 1rem;
+  margin-left: 0px; 
+}
+.album {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); 
+  gap: 1.5rem;
+  justify-content: center;
+  margin-left: 70px; 
+}
+
+.album img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; 
+}
+
+figure {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1px;
+  
+}
+header h1 {
+  margin: 0;
+  text-align: center;
+}  
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+footer {
+  background-color: #004466;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+footer p {
+  margin: 0.3rem 0;         
+}
