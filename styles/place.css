@@ -1,0 +1,101 @@
+:root {
+  --primary-color: #008751;   /* Nigerian green */
+  --secondary-color: #ffffff; /* White */
+  --accent-color: #000000;    /* Black */
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  object-fit: cover;   /* crops nicely if height is limited */
+  display: block;
+  height: auto;  
+}
+
+.hero {
+  position: relative; /* allows absolute positioning inside */
+}
+
+.weather {
+  position: absolute;       /* place it over the hero image */
+  top: 20%;                 /* adjust vertical position */
+  right: 5%;                /* push it to the right side */
+  background-color: rgba(0, 135, 81, 0.6); /* Nigerian green with transparency */
+  color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 250px;
+}
+
+.overview {
+  position: absolute;       /* place it over the hero image */
+  top: 20%;                 /* adjust vertical position */
+  right: 75%;                /* push it to the right side */
+  background-color: rgba(0, 135, 81, 0.6); /* Nigerian green with transparency */
+  color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 250px;
+}
+.overview h2 {
+  color:whitesmoke; /* makes only the Country Overview heading red */
+  text-align: center;
+  margin-bottom: 2rem;
+  
+}
+
+.weather h2::after {
+  content: " ⛅"; /* pseudo-element weather icon for wider view */
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.weather-info {
+  display: grid;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Media Query for wider screens */
+@media (min-width: 768px) {
+  .weather-info {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .mobile-icon {
+    display: none; /* hide SVG icon in wider view */
+  }
+}
+footer {
+  background-color: var(--primary-color);   /* Nigerian green */
+  color: var(--secondary-color);            /* White text */
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0; /* small spacing between lines */
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigeria Place Page</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Discover Nigeria</h1>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/nigeria-hero-small.webp" media="(max-width: 500px)">
+        <source srcset="images/nigeria-hero-medium.webp" media="(max-width: 769px)">
+        <img src="images/nigeria.webp" alt="Nigeria Landscape Hero Image">
+      </picture>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Weather</h2>
+      <div class="weather-info">
+        <p>Temperature: <span id="temp">28°C</span></p>
+        <p>Wind Speed: <span id="speed">12 km/h</span></p>
+        <p>Wind Chill: <span id="chill"></span></p>
+        <img src="images/cloud.svg" alt="Weather Icon" class="mobile-icon">
+      </div>
+    </section>
+    
+  </main>
+ <section class="overview">
+    <h2>Country Overview</h2>
+    <div class="overview-info">
+      <p><strong>Country:</strong> Nigeria</p>
+      <p><strong>Capital:</strong> Abuja</p>
+      <p><strong>Population:</strong> ~237.5 million (2025)</p>
+      <p><strong>Area:</strong> 923,768 km²</p>
+      <p><strong>GDP (Nominal):</strong> $290.8 billion (2025)</p>
+      <p><strong>Currency:</strong> Nigerian Naira (₦)</p>
+      <p><strong>Life Expectancy:</strong> 55 years</p>
+      <p><strong>Literacy Rate:</strong> ~62%</p>
+      <p><strong>Urbanization:</strong> ~54%</p>
+    </div>
+  </section>
+  <footer>
+  <p>&copy; <span id="year"></span> Prosper Eze — Nigeria🌸</p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>
