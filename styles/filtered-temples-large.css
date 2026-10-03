@@ -1,0 +1,69 @@
+@media only screen and (min-width: 48rem) { /* Changed from 32rem to 48rem (768px) which is better for tablets and desktops */
+  
+  /* Header layout */
+  header {
+    display: flex;
+    flex-direction: row; /* Forces side-by-side header content */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+  }
+
+  header h1 {
+    text-align: left;
+    margin: 0;
+  }
+
+  /* Navigation & Hamburger Toggle Override */
+  .hamburger {
+    display: none !important; /* Forces mobile menu icon to hide on large screens */
+  }
+
+  nav {
+    display: block !important; /* Overrides JS toggles and keeps links permanently visible */
+    width: auto;
+  }
+
+  /* Restyle navigation list into a horizontal horizontal row */
+  #main-nav {
+    flex-direction: row;
+    background-color: transparent;
+    gap: 1rem;
+  }
+
+  #main-nav li a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  /* --- Main & Container Structural Grid --- */
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  #gallery-title {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  /* FIX: Apply the grid here so cards layout 3-wide without breaking your title */
+  .temple-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns side-by-side */
+    gap: 20px;
+  }
+
+  /* --- Temple Cards Image Fix for No Stretching --- */
+  .temple-card img {
+    width: 100%;          
+    height: 240px;        /* Fixed height prevents vertical distortion */
+    object-fit: cover;    /* Prevents image stretching */
+    display: block;       
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    order: -1;            /* Places image clean at the top of card */
+    margin-bottom: 12px;
+  }
+}
