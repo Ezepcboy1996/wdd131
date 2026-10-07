@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submission Confirmation page for the Product Review Form showing submission metrics.">
+    <meta name="author" content="Prosper Eze">
+    <title>Review Submitted | WDD 131</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Submission Confirmed</h1>
+        <p>Course Assignment: WDD 131 — Confirmation Workflow</p>
+    </header>
+
+    <main class="confirmation-container">
+        <div class="confirmation-card">
+            <div class="success-icon">✓</div>
+            <h2>Thank You for Your Feedback!</h2>
+            <p>Your product review has been successfully recorded and submitted.</p>
+            
+            <div class="counter-box">
+                <p>Total Reviews Submitted on this Browser:</p>
+                <span id="reviewCount" class="counter-number">0</span>
+            </div>
+            
+            <a href="form.html" class="return-btn">Submit Another Review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 | Tri-City Hidden Gems Plan | WDD 131 Student Submission Repository</p>
+        <p>Designed by: <span>Prosper Eze</span></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/review.js" defer></script>
+</body>
+</html>
