@@ -1,4 +1,3 @@
-/* Design Tokens / CSS Variables */
 :root {
     --primary-color: #1a365d;
     --secondary-color: #2b6cb0;
@@ -8,6 +7,8 @@
     --card-bg: #ffffff;
     --border-color: #cbd5e0;
     --error-color: #e53e3e;
+    --star-active: #ecc94b;
+    --star-inactive: #cbd5e0;
     --heading-font: 'Helvetica Neue', Arial, sans-serif;
     --body-font: 'Georgia', 'Times New Roman', serif;
 }
@@ -49,7 +50,6 @@ main {
     padding: 2rem 1rem;
 }
 
-/* Form Styles */
 .review-form {
     background-color: var(--card-bg);
     max-width: 600px;
@@ -125,7 +125,6 @@ textarea:focus {
     box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
 }
 
-/* Star Rating Style (Pure CSS Flipping Star System) */
 .rating-fieldset {
     border: none;
 }
@@ -144,7 +143,7 @@ textarea:focus {
 
 .rating-stars label {
     cursor: pointer;
-    color: #cbd5e0;
+    color: var(--star-inactive);
     transition: color 0.1s ease;
     margin-bottom: 0;
 }
@@ -152,40 +151,43 @@ textarea:focus {
 .rating-stars label:hover,
 .rating-stars label:hover ~ label,
 .rating-stars input[type="radio"]:checked ~ label {
-    color: #ecc94b;
+    color: var(--star-active);
 }
 
-/* Checkbox arrangement */
 .features-fieldset {
     border: 1px solid var(--border-color);
-    padding: 1rem;
+    padding: 1.25rem;
     border-radius: 4px;
 }
 
 .checkbox-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
     margin-top: 0.5rem;
 }
 
-.checkbox-group label {
-    font-family: var(--body-font);
-    font-weight: normal;
-    font-size: 1rem;
+.checkbox-item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    font-family: var(--body-font);
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 0;
     cursor: pointer;
     color: var(--text-color);
 }
 
-.checkbox-group input[type="checkbox"] {
-    width: 1.1rem;
-    height: 1.1rem;
-}
-
-/* Submit Action Button */
 .submit-btn {
     background-color: var(--accent-color);
     color: white;
@@ -204,7 +206,12 @@ textarea:focus {
     background-color: #c05621;
 }
 
-/* Confirmation Styles */
+.confirmation-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .confirmation-card {
     background-color: var(--card-bg);
     border-radius: 8px;
@@ -261,7 +268,10 @@ textarea:focus {
     transition: background-color 0.2s;
 }
 
-/* Footer Section Rules */
+.return-btn:hover {
+    background-color: #2b6cb0;
+}
+
 footer {
     background-color: var(--primary-color);
     color: #cbd5e0;
@@ -277,12 +287,14 @@ footer span {
     color: white;
 }
 
-/* Responsive Overrides */
 @media (max-width: 480px) {
     .review-form {
         padding: 1.5rem 1rem;
     }
     header h1 {
         font-size: 1.8rem;
+    }
+    .checkbox-group {
+        grid-template-columns: 1fr;
     }
 }

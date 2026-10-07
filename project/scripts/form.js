@@ -9,14 +9,14 @@ const products = [
 document.addEventListener("DOMContentLoaded", () => {
     const productSelect = document.getElementById("product-name");
     
-    // Dynamic population of product options
+    
     if (productSelect) {
         products.forEach(product => {
             const option = document.createElement("option");
-            // Set value attribute to the array's id
+    
             option.value = product.id;
             
-            // Format name to capital case for nice display look
+            
             const formattedName = product.name.split(' ')
                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
                 .join(' ');
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Standard last modified footer tracking engine
     const lastModifiedEl = document.getElementById("lastModified");
     if (lastModifiedEl) {
         lastModifiedEl.textContent = document.lastModified;
