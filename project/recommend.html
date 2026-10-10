@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suggest newly discovered regional spots to our directory verification matrix using our accessible form module.">
+    <title>Submit Location | Tri-City Hidden Gems</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Submit A Location</h1>
+        <p>Discovered something incredible? Send it in for community analysis.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Explore Directory</a></li>
+            <li><a href="recommend.html" class="active">Submit A Location</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Location Recommendation Form</h2>
+        <form method="get" action="recommend.html" id="recommendationForm" class="recommend-form">
+            
+            <div class="form-group">
+                <label for="gemName">Location Name *</label>
+                <input type="text" id="gemName" name="gemName" required placeholder="e.g., Whispering Pines Overlook">
+            </div>
+
+            <div class="form-group">
+                <label for="categorySelect">Primary Category *</label>
+                <select id="categorySelect" name="category" required>
+                    <option value="" disabled selected>Choose a category...</option>
+                    <option value="nature">Nature Trails</option>
+                    <option value="food">Coffee & Dining</option>
+                    <option value="culture">Art & Culture</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="neighborhood">Regional Location Zone *</label>
+                <input type="text" id="neighborhood" name="neighborhood" required placeholder="e.g., North Valley District">
+            </div>
+
+            <div class="form-group">
+                <label for="userNotes">Curation Description Notes *</label>
+                <textarea id="userNotes" name="notes" rows="5" required placeholder="What makes this spot special? Provide helpful navigation notes..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send to Verification Vault</button>
+        </form>
+
+        <div class="dashboard-widget">
+            <p>Your Total Submitted Recommendations Tracker:<span id="submissionCount" class="counter-val">0</span></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Tri-City Hidden Gems Directory | Prosper Eze | Last Modified: <span id="lastModified"></span></p>
+        <p style="margin-top: 0.5rem;"><a href="references.html">Citations and Resource Attributions Page</a></p>
+    </footer>
+</body>
+</html>

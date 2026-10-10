@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our filtered database collection of outdoor pathways, hidden cafes, and artist collectives using native lazy loading cards.">
+    <title>Explore Directory | Tri-City Hidden Gems</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Hidden Gems Explorer</h1>
+        <p>Interactive regional catalog loaded with client performance data.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Explore Directory</a></li>
+            <li><a href="recommend.html">Submit A Location</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Dynamic Regional Registry</h2>
+        
+        <div class="filter-controls" id="filterControls">
+            <button class="filter-btn active" data-category="all">Show All Locations</button>
+            <button class="filter-btn" data-category="nature">🌲 Nature Trails</button>
+            <button class="filter-btn" data-category="food">☕ Coffee & Dining</button>
+            <button class="filter-btn" data-category="culture">🎨 Art & Culture</button>
+        </div>
+
+        <section class="gems-grid" id="gemsGrid"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Tri-City Hidden Gems Directory | Prosper Eze | Last Modified: <span id="lastModified"></span></p>
+        <p style="margin-top: 0.5rem;"><a href="references.html">Citations and Resource Attributions Page</a></p>
+    </footer>
+</body>
+</html>
