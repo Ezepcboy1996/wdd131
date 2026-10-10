@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Suggest newly discovered regional spots to our directory verification matrix using our accessible form module.">
+    <meta name="author" content="Prosper Eze">
     <title>Submit Location | Tri-City Hidden Gems</title>
     <link rel="stylesheet" href="styles/project.css">
     <script src="scripts/project.js" defer></script>
@@ -25,6 +26,7 @@
     <main>
         <h2>Location Recommendation Form</h2>
         <form method="get" action="recommend.html" id="recommendationForm" class="recommend-form">
+            <p class="form-instructions">Fields marked with an asterisk (*) are required paths.</p>
             
             <div class="form-group">
                 <label for="gemName">Location Name *</label>
@@ -36,8 +38,8 @@
                 <select id="categorySelect" name="category" required>
                     <option value="" disabled selected>Choose a category...</option>
                     <option value="nature">Nature Trails</option>
-                    <option value="food">Coffee & Dining</option>
-                    <option value="culture">Art & Culture</option>
+                    <option value="food">Coffee &amp; Dining</option>
+                    <option value="culture">Art &amp; Culture</option>
                 </select>
             </div>
 

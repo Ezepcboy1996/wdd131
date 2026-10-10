@@ -86,7 +86,7 @@ h2 {
 
 /* Home Page Styles */
 .hero {
-    background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('https://picsum.photos') center/cover no-repeat;
+    background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('https://unsplash.com') center/cover no-repeat;
     color: #ffffff;
     text-align: center;
     padding: 4rem 1rem;
@@ -113,6 +113,15 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-left: 5px solid var(--secondary-color);
+}
+
+.info-card ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+.info-card li {
+    margin-bottom: 0.75rem;
 }
 
 /* Directory Filtering */
@@ -228,6 +237,12 @@ h2 {
     border-top: 5px solid var(--secondary-color);
 }
 
+.form-instructions {
+    font-size: 0.95rem;
+    color: #718096;
+    margin-bottom: 1rem;
+}
+
 .form-group {
     margin-bottom: 1.5rem;
     display: flex;
@@ -295,6 +310,14 @@ h2 {
     margin-left: 0.5rem;
 }
 
+/* Audit Fix: Form layout empty grid message replacement style rule */
+.directory-error-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--error-color);
+    font-weight: bold;
+}
+
 /* Footer Styles */
 footer {
     background-color: var(--primary-color);
@@ -325,3 +348,4 @@ footer a {
         padding: 1.5rem;
     }
 }
+
