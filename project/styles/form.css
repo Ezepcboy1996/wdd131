@@ -97,9 +97,9 @@ main {
     color: var(--primary-color);
 }
 
+/* Fixes block layout flow inside flex boxes and removes conflicting floats */
 .form-group legend {
     border: none;
-    float: left;
     width: 100%;
 }
 
@@ -127,6 +127,7 @@ textarea:focus {
 
 .rating-fieldset {
     border: none;
+    padding: 0;
 }
 
 .rating-stars {
@@ -144,7 +145,7 @@ textarea:focus {
 .rating-stars label {
     cursor: pointer;
     color: var(--star-inactive);
-    transition: color 0.1s ease;
+    transition: color 0.1s ease, transform 0.1s ease;
     margin-bottom: 0;
 }
 
@@ -152,6 +153,13 @@ textarea:focus {
 .rating-stars label:hover ~ label,
 .rating-stars input[type="radio"]:checked ~ label {
     color: var(--star-active);
+}
+
+/* Keyboard accessibility outline helper for hidden inputs */
+.rating-stars input[type="radio"]:focus + label {
+    outline: 2px dashed var(--secondary-color);
+    outline-offset: 2px;
+    transform: scale(1.1);
 }
 
 .features-fieldset {
@@ -204,6 +212,11 @@ textarea:focus {
 
 .submit-btn:hover {
     background-color: #c05621;
+}
+
+.submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(221, 107, 32, 0.4);
 }
 
 .confirmation-container {
@@ -269,7 +282,7 @@ textarea:focus {
 }
 
 .return-btn:hover {
-    background-color: #2b6cb0;
+    background-color: #23538a;
 }
 
 footer {

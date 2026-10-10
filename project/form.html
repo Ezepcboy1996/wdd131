@@ -7,7 +7,6 @@
     <meta name="author" content="Prosper Eze">
     <title>Product Review Form | WDD 131</title>
     <link rel="stylesheet" href="styles/form.css">
-    <!-- FIX: Moved script to head with defer attribute as suggested by page audit -->
     <script src="scripts/form.js" defer></script>
 </head>
 <body>
@@ -33,19 +32,20 @@
             <fieldset class="form-group rating-fieldset">
                 <legend>Overall Rating <span class="required">*</span></legend>
                 <div class="rating-stars">
+                    <!-- Only the first choice requires the required attribute constraint -->
                     <input type="radio" id="star5" name="rating" value="5" required>
                     <label for="star5" title="5 stars">☆</label>
                     
-                    <input type="radio" id="star4" name="rating" value="4" required>
+                    <input type="radio" id="star4" name="rating" value="4">
                     <label for="star4" title="4 stars">☆</label>
                     
-                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <input type="radio" id="star3" name="rating" value="3">
                     <label for="star3" title="3 stars">☆</label>
                     
-                    <input type="radio" id="star2" name="rating" value="2" required>
+                    <input type="radio" id="star2" name="rating" value="2">
                     <label for="star2" title="2 stars">☆</label>
                     
-                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <input type="radio" id="star1" name="rating" value="1">
                     <label for="star1" title="1 star">☆</label>
                 </div>
             </fieldset>
@@ -60,7 +60,6 @@
             <fieldset class="form-group features-fieldset">
                 <legend>Useful Features (Check all that apply)</legend>
                 <div class="checkbox-group">
-                    <!-- FIX: Un-nested inputs and added explicit for="" attributes to match specific IDs -->
                     <div class="checkbox-item">
                         <input type="checkbox" id="feature-durability" name="features" value="durability">
                         <label for="feature-durability">Durability</label>
@@ -109,4 +108,3 @@
     </footer>
 </body>
 </html>
-
