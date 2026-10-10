@@ -327,6 +327,10 @@ footer {
     margin-top: auto;
     font-size: 0.95rem;
 }
+.footer-citation-link {
+    margin-top: 0.5rem;
+}
+
 
 footer a {
     color: #ffffff;
