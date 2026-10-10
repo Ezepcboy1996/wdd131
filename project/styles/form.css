@@ -97,7 +97,6 @@ main {
     color: var(--primary-color);
 }
 
-/* Fixes block layout flow inside flex boxes and removes conflicting floats */
 .form-group legend {
     border: none;
     width: 100%;

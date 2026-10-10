@@ -20,7 +20,6 @@
             <h2>Share Your Experience</h2>
             <p class="form-instructions">Fields marked with an asterisk (<span class="required">*</span>) are required.</p>
 
-            <!-- Product Selection -->
             <div class="form-group">
                 <label for="product-name">Product Name <span class="required">*</span></label>
                 <select id="product-name" name="productName" required>
@@ -28,35 +27,32 @@
                 </select>
             </div>
 
-            <!-- Overall Rating -->
             <fieldset class="form-group rating-fieldset">
                 <legend>Overall Rating <span class="required">*</span></legend>
                 <div class="rating-stars">
-                    <!-- Only the first choice requires the required attribute constraint -->
+                   
                     <input type="radio" id="star5" name="rating" value="5" required>
                     <label for="star5" title="5 stars">☆</label>
                     
-                    <input type="radio" id="star4" name="rating" value="4">
+                    <input type="radio" id="star4" name="rating" value="4" required>
                     <label for="star4" title="4 stars">☆</label>
                     
-                    <input type="radio" id="star3" name="rating" value="3">
+                    <input type="radio" id="star3" name="rating" value="3" required>
                     <label for="star3" title="3 stars">☆</label>
                     
-                    <input type="radio" id="star2" name="rating" value="2">
+                    <input type="radio" id="star2" name="rating" value="2" required>
                     <label for="star2" title="2 stars">☆</label>
                     
-                    <input type="radio" id="star1" name="rating" value="1">
+                    <input type="radio" id="star1" name="rating" value="1" required>
                     <label for="star1" title="1 star">☆</label>
                 </div>
             </fieldset>
 
-            <!-- Date of Installation -->
             <div class="form-group">
                 <label for="installation-date">Date of Installation <span class="required">*</span></label>
                 <input type="date" id="installation-date" name="installationDate" required>
             </div>
 
-            <!-- Useful Features checkboxes -->
             <fieldset class="form-group features-fieldset">
                 <legend>Useful Features (Check all that apply)</legend>
                 <div class="checkbox-group">
@@ -82,13 +78,11 @@
                 </div>
             </fieldset>
 
-            <!-- Written Review (Optional Textarea) -->
             <div class="form-group">
                 <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
                 <textarea id="written-review" name="writtenReview" rows="5" placeholder="Tell us what you liked or disliked..."></textarea>
             </div>
 
-            <!-- User Name (Optional Text) -->
             <div class="form-group">
                 <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
                 <input type="text" id="user-name" name="userName" placeholder="e.g., Prosper Eze">
@@ -108,3 +102,4 @@
     </footer>
 </body>
 </html>
+

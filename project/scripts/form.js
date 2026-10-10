@@ -1,4 +1,4 @@
-// Official assignment array data source
+
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
   { id: "fc-2050", name: "power cells", averagerating: 4.7 },
@@ -14,10 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
         products.forEach(product => {
             const option = document.createElement("option");
     
-            // Sets array's ID as the element value per guidelines
             option.value = product.id;
             
-            // Custom title-case formatter for optimal presentation layout
             const formattedName = product.name.split(' ')
                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
                 .join(' ');
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Dynamic Footer Last Modified Date
     const lastModifiedEl = document.getElementById("lastModified");
     if (lastModifiedEl) {
         lastModifiedEl.textContent = document.lastModified;
